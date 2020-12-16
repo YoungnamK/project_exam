@@ -23,7 +23,7 @@ import mypkg.utility.Myutility;
 // 임시 테스트용 코드를 사용하고자 하는 경우 true로 지정하고 사용하도록 합니다. 
 @WebServlet(urlPatterns = { "/Shopping" }, initParams = {
 		@WebInitParam(name = "configFile", value = "/WEB-INF/todolist.txt") ,
-		@WebInitParam(name = "debugMode", value = "true") })	
+		@WebInitParam(name = "debugMode", value = "false") })	
 public class FrontController extends HttpServlet {
 	// todolist : 우리가 명시한 모든 작업 목록
 	private Map<String, SuperController> todolist = new HashMap<String, SuperController>();

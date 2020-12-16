@@ -169,7 +169,7 @@
 						data-toggle="dropdown">쇼핑몰<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><c:if test="${whologin != 0}">
-									<a href="<%=NoForm%>mallOrder">나의 쇼핑 내역</a>
+									<a href="<%=NoForm%>mallHistory">나의 쇼핑 내역</a>
 								</c:if></li>
 							<li><c:if test="${whologin != 0}">
 									<a href="<%=NoForm%>mallList">장바구니 보기</a>
@@ -201,9 +201,10 @@
 		</div>
 	</nav>
 	<c:if test="${not empty requestScope.errmsg}">
-		<script type="text/javascript">
-			alert('${requestScope.errmsg}');
-		</script>
+		<div class="alert alert-danger alert-dismissable">
+    		<a href="#" id="myalert" class="close" data-dismiss="alert" aria-label="close">닫기</a>
+    		<strong>${requestScope.errmsg}</strong>
+		</div>
 	</c:if>
 	<c:if test="${not empty sessionScope.message}">
 		<script type="text/javascript">

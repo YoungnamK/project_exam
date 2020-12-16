@@ -24,7 +24,7 @@ public class MemberInsertController extends SuperClass{
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		bean  = new Member();
+		bean = new Member();
 		bean.setAddress1( request.getParameter("address1") );	
 		bean.setAddress2( request.getParameter("address2") );
 		bean.setGender( request.getParameter("gender") );
